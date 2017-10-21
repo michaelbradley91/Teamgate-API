@@ -19,6 +19,9 @@
     <TestProjectType>UnitTest</TestProjectType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Pickles_Generate>True</Pickles_Generate>
+    <Pickles_FeatureDirectory>$(MSBuildProjectDirectory)\Features</Pickles_FeatureDirectory>
+    <Pickles_OutputDirectory>$(MSBuildProjectDirectory)\Site</Pickles_OutputDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,6 +83,10 @@
       <LastGenOutput>Calculator.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Site\css\fonts\fontawesome-webfont.eot" />
+    <None Include="Site\css\fonts\fontawesome-webfont.ttf" />
+    <None Include="Site\css\fonts\fontawesome-webfont.woff" />
+    <None Include="Site\css\fonts\FontAwesome.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeamgateAPI\TeamgateAPI.csproj">
@@ -87,8 +94,22 @@
       <Name>TeamgateAPI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Site\" />
+    <Content Include="Site\Calculator.html" />
+    <Content Include="Site\css\font-awesome.css" />
+    <Content Include="Site\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="Site\css\global.css" />
+    <Content Include="Site\css\master.css" />
+    <Content Include="Site\css\print.css" />
+    <Content Include="Site\css\reset.css" />
+    <Content Include="Site\css\structure.css" />
+    <Content Include="Site\img\failure.png" />
+    <Content Include="Site\img\inconclusive.png" />
+    <Content Include="Site\img\success.png" />
+    <Content Include="Site\index.html" />
+    <Content Include="Site\js\jquery.js" />
+    <Content Include="Site\js\scripts.js" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
