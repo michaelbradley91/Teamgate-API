@@ -22,6 +22,8 @@
     <Pickles_Generate>True</Pickles_Generate>
     <Pickles_FeatureDirectory>$(MSBuildProjectDirectory)\Features</Pickles_FeatureDirectory>
     <Pickles_OutputDirectory>$(MSBuildProjectDirectory)\Site</Pickles_OutputDirectory>
+    <Pickles_DocumentationFormat>dhtml</Pickles_DocumentationFormat>
+    <Pickles_ResultsFormat>nunit</Pickles_ResultsFormat>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
